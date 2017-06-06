@@ -164,14 +164,14 @@ class SmallConfig(object):
   learning_rate = 0.01
   max_grad_norm = 5
   num_layers = 3
-  num_steps = 30
-  hidden_size = 100
+  num_steps = 40
+  hidden_size = 200
   max_epoch = 5
   max_max_epoch = 100
   keep_prob = 1
   lr_decay = 0.97
   batch_size = 30
-  output_size = 15
+  output_size = 30
 
 
 def run_epoch(session, model, eval_op=None, verbose=False, is_test=False):
