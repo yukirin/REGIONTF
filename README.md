@@ -6,5 +6,5 @@ This software is released under the [MIT License][MIT], see LICENSE
 
 [MIT]: http://www.opensource.org/licenses/mit-license.php
 
-##Author
+## Author
 [yukirin](https://github.com/yukirin)
