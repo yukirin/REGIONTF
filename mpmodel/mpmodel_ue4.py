@@ -24,17 +24,18 @@ class MPModelUE4(TFPluginAPI):
        with tf.Graph().as_default():
            initializer = tf.random_uniform_initializer(-eval_config.init_scale, eval_config.init_scale)
            with tf.name_scope("Test"):
-              test_input = mpmodel.MPInput(config=eval_config, data=test_data,
+              test_input = mpmodel.MPInput(config=eval_config, data=[],
                                            is_predict=True, name="TestInput")
               with tf.variable_scope("Model", reuse=False, initializer=initializer):
                  self.model = mpmodel.MPModel(is_training=False, config=eval_config,
                                                                input_=test_input, is_test=True)
+                 self.sess = tf.InteractiveSession()
+                 ckpt = tf.train.get_checkpoint_state('./save')
+                 last_model = ckpt.model_checkpoint_path
+                 saver = tf.train.Saver()
+                 saver.restore(self.sess, last_model)
 
-       self.sess = tf.InteractiveSession()
-       ckpt = tf.train.get_checkpoint_state('./save')
-       last_model = ckpt.model_checkpoint_path
-       saver = tf.train.Saver()
-       saver.restore(sess, last_model)
+       
 
    def _decodeJson(self, jsonInput):
       data = np.array(jsonInput['input'].split(','), dtype=np.float32)

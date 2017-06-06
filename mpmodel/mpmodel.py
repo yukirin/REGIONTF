@@ -30,7 +30,6 @@ $ python mpmodel.py
 import time
 import numpy as np
 import tensorflow as tf
-import plot
 import reader
 
 flags = tf.flags
@@ -108,14 +107,15 @@ class MPModel(object):
         "softmax_w", [size, output_size * input_size], dtype=data_type())
     softmax_b = tf.get_variable("softmax_b", [output_size * input_size], dtype=data_type())
     logits = tf.matmul(output, softmax_w) + softmax_b
-    self._logits = logits
-    if not is_training:
-      return
 
     targets = tf.reshape(input_.targets, [-1, output_size * input_size])
     loss = tf.losses.mean_squared_error(targets, logits)
+    self._logits = logits
     self._cost = loss
     self._final_state = state
+
+    if not is_training:
+      return
 
     global_step = tf.contrib.framework.get_or_create_global_step()
     self._lr = tf.train.exponential_decay(config.learning_rate, global_step,
@@ -262,7 +262,6 @@ def main(_):
         print("Epoch: %d Train Cost Avg: %.8f" % (i + 1, train_cost_avg))
 
       actual, predicts = predict_epoch(session, mtest, offset=50)
-      plot.plot3d(actual, predicts, config.num_steps)
 
 
 if __name__ == "__main__":
