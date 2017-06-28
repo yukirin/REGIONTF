@@ -1,2 +1,41 @@
 # Input
+- Pos X
+- Pos Y
+- Pos Z
+- LockOn
+- FireL
+- FireR
+- BackFire
+- VTS
+- LookUpRate
+- TurnRate
+- Anchor
+- LockChange
+- ChangeWeapon
+- ReloadR
+- ReloadL
+- LowMode
+- Boost
+- MoveForward
+- MoveRight
+- EnemyPosX
+- EnemyPosY
+- EnemyPosZ
+- Speed
+
 # Output
+- Anchor 0 or 1
+- LockChange 0 or 1
+- BackWeapon 0 or 1
+- WeaponL 0 or 1
+- ChangeWeapon 0 or 1
+- WeaponR 0 or 1
+- VTS 0 or 1
+- ReloadR 0 or 1
+- ReloadL 0 or 1
+- LowMode 0 or 1
+- Boost 0 or 1
+- LookUpRate -1 ~ 1
+- MoveForward -1 ~ 1
+- MoveRight -1 ~ 1
+- TurnRate -1 ~ 1
