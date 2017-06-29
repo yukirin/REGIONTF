@@ -1,14 +1,14 @@
 # Input
-- Pos X -1 ~ 1
-- Pos Y -1 ~ 1
-- Pos Z -1 ~ 1
+- Pos X 0 ~ 1
+- Pos Y 0 ~ 1
+- Pos Z 0 ~ 1
 - LockOn 0 or 1
 - FireL 0 or 1
 - FireR 0 or 1
 - BackFire 0 or 1
 - VTS 0 or 1
-- LookUpRate -1 ~ 1
-- TurnRate -1 ~ 1
+- LookUpRate 0 ~ 1
+- TurnRate 0 ~ 1
 - Anchor 0 or 1
 - LockChange 0 or 1
 - ChangeWeapon 0 or 1
@@ -16,12 +16,14 @@
 - ReloadL 0 or 1
 - LowMode 0 or 1
 - Boost 0 ~ 1
-- MoveForward -1 ~ 1
-- MoveRight -1 ~ 1
-- EnemyPosX -1 ~ 1
-- EnemyPosY -1 ~ 1
-- EnemyPosZ -1 ~ 1
+- MoveForward 0 ~ 1
+- MoveRight 0 ~ 1
+- RelativeEnemyPosX 0 ~ 1
+- RelativeEnemyPosY 0 ~ 1
+- RelativeEnemyPosZ 0 ~ 1
 - Speed 0 ~ 1
+- Rot 0 ~ 1
+- EnemyRot 0 ~ 1
 
 # Output
 - Anchor 0 or 1
