@@ -1,0 +1,9 @@
+- minX
+- maxX
+- minY
+- maxY
+- minZ
+- maxZ
+- x
+- y
+- z

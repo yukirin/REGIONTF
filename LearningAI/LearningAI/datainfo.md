@@ -26,16 +26,16 @@
 - EnemyRot 0 ~ 1
 
 # Output
-- Anchor 0 or 1
-- LockChange 0 or 1
-- BackWeapon 0 or 1
-- WeaponL 0 or 1
-- ChangeWeapon 0 or 1
-- WeaponR 0 or 1
-- VTS 0 or 1
-- ReloadR 0 or 1
-- ReloadL 0 or 1
-- LowMode 0 or 1
+- Anchor 0 ~ 1
+- LockChange 0 ~ 1
+- BackWeapon 0 ~ 1
+- WeaponL 0 ~ 1
+- ChangeWeapon 0 ~ 1
+- WeaponR 0 ~ 1
+- VTS 0 ~ 1
+- ReloadR 0 ~ 1
+- ReloadL 0 ~ 1
+- LowMode 0 ~ 1
 - Boost 0 ~ 1
 - LookUpRate -1 ~ 1
 - MoveForward -1 ~ 1
